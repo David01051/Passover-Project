@@ -5,8 +5,9 @@
     "Lucida Sans", Arial, sans-serif;
 }
 body {
-  background-color: rgb(103, 107, 107);
+  background-color: rgb(233, 233, 233);
 }
+
 header {
   width: 90vw;
   height: 130px;
@@ -14,17 +15,16 @@ header {
   border-radius: 0px 0px 25px 25px;
   background: rgb(255, 255, 255);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
 }
 #img-logo {
   width: 250px;
   height: 100px;
+  margin-top: 10px;
 }
-#img-logo2{
+#img-logo2 {
   width: 80px;
   height: 140px;
-  margin-left: 300%;
 }
 
 section {
@@ -35,9 +35,11 @@ section {
 aside {
   flex-basis: 10%;
   min-width: 200px;
-  background: rgb(215, 216, 218);
-  
+  border: 1px solid black;
+  border-radius: 0px 8px 8px 0px;
+  background: rgb(198, 199, 202);
 }
+
 main {
   flex-basis: 90%;
   padding: 16px;
@@ -45,7 +47,7 @@ main {
 footer {
   width: 100vw;
   height: 100px;
-  background: rgb(59, 59, 59);
+  background: rgb(88, 88, 88);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,37 +56,40 @@ footer {
   width: 100vw;
   height: 50px;
   color: white;
-  background-color: rgb(43, 42, 42);
+  background-color: rgb(61, 60, 60);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 main button {
-  background-color: rgb(59, 59, 59);
+  background-color: rgb(12, 152, 233);
   border: none;
   color: white;
   padding: 15px;
   text-align: center;
   text-decoration: none;
-  margin-left: 30%;
+  margin-left: 25%;
   font-size: 16px;
   border-radius: 10%;
-  
 }
-#studentCards, #test {
+#studentCards,
+#test {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.studentClassCard ,#test, #studentId{
+.studentClassCard,
+#test,
+#studentId {
   width: 30%;
   height: 250px;
   margin: 12px;
   font-size: 90%;
-  background-color: rgb(59, 59, 59);
+  background-color: rgb(85, 84, 84);
   border-radius: 5%;
   display: flex;
   align-items: center;
@@ -96,7 +101,7 @@ main button {
 }
 .student-details {
   flex-basis: 60%;
-  color: rgb(211, 209, 209);
+  color: rgb(252, 250, 250);
 }
 .student-image {
   flex-basis: 40%;
@@ -167,37 +172,31 @@ main button {
   background-color: #e4405f;
 }
 
-#student-add-user{
-    padding: 16px;
-    display: flex;
-    justify-content: center;   
+#student-add-user {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
 }
 
-#student-add-user .form-user{
-    width: 25vw;
-    border-radius: 16px;
-    color: white;
-    background-color: rgb(59, 59, 59);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-     
+#student-add-user .form-user {
+  width: 25vw;
+  border-radius: 16px;
+  color: white;
+  background-color: rgb(59, 59, 59);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-#student-add-user .form-user input{
-    width: 50%;
-    height: 30px;
-    border-radius: 8px;
+#student-add-user .form-user input button{
+  width: 50%;
+  height: 30px;
+  border-radius: 8px;
 }
-#student-add-user .form-user #sub{
-    width: 80px;
-    height: 40px;
-    border-radius: 16px;
-    color: white;
-    background-color: rgb(94, 91, 91);
+#student-add-user .form-user #subbu {
+  width: 80px;
+  height: 40px;
+  border-radius: 16px;
+  color: white;
+  background-color: rgb(94, 91, 91);
 }
-
-
-
-
-

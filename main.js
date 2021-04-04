@@ -1,16 +1,17 @@
-let x = document.getElementById("student-table-container");
-x.style.display = "none";
-let y = document.getElementById("student-add-user");
-y.style.display = "none";
+let userTable = document.getElementById("student-table-container");
+userTable.style.display = "none";
+let addUser = document.getElementById("student-add-user");
+addUser.style.display = "none";
 test.style.display = "none";
 class User {
-  constructor(id, picture, age, name, email, phone) {
+  constructor(id, picture, age, name, email, phone, index) {
     this.id = id;
     this.picture = picture;
     this.age = age;
     this.name = name;
     this.email = email;
     this.phone = phone;
+    this.index = index;
   }
 }
 const usersArray = [];
@@ -27,13 +28,14 @@ const fetchUsers = async () => {
         user.age,
         `${user.name.first} ${user.name.last}`,
         user.email,
-        user.phone
+        user.phone,
+        user.index
       )
     );
 
     let studentCard = document.createElement("div");
     studentCard.classList.add("studentClassCard");
-    studentCard.innerHTML = `<div id="studentId" onclick="showUser()"> <div class="student-details">
+    studentCard.innerHTML = `<div  onclick="showUser()"> <div class="student-details">
     <h2>${user.name}</h2><br>
     <span>Age:${user.age}</span><br>
     <span>Email:${user.email}</span><br>
@@ -44,7 +46,7 @@ const fetchUsers = async () => {
     <img src="${user.picture}" alt="">
     </div>
     </div>`;
-    test.innerHTML = `<div id="studentId" onclick="showUser()"> <div class="student-details">
+    test.innerHTML = `<div onclick="showUser()"> <div class="student-details">
     <h2>${user.name}</h2><br>
     <span>Age:${user.age}</span><br>
     <span>Email:${user.email}</span><br>
@@ -55,7 +57,6 @@ const fetchUsers = async () => {
     <img src="${user.picture}" alt="">
     </div>
     </div>`;
-    /*return studentCard;*/
   });
   return usersArray;
 };
@@ -63,7 +64,7 @@ const fetchUsers = async () => {
 const createUserCard = (user) => {
   let studentCard = document.createElement("div");
   studentCard.classList.add("studentClassCard");
-  studentCard.innerHTML = `<div id="studentId" onclick="showUser()"> <div class="student-details">
+  studentCard.innerHTML = `<div onclick="showUser(${user.index})"> <div class="student-details">
     <h2>${user.name}</h2><br>
     <span>Age:${user.age}</span><br>
     <span>Email:${user.email}</span><br>
@@ -77,14 +78,7 @@ const createUserCard = (user) => {
 
   return studentCard;
 };
-/*let x = document.getElementById("userIdCard");
-    x.onclick = function(){
-        if (studentUser.style.display === "none") {
-            studentUser.style.display = "flex";
-          } else {
-            studentUser.style.display = "none";
-          } 
-    }*/
+
 const createUserRow = (user) => {
   const studentTableRow = document.createElement("tr");
   studentTableRow.innerHTML = `
@@ -100,14 +94,14 @@ const createUserRow = (user) => {
 const showTable = () => {
   const studentCards = document.getElementById("studentCards");
   const studentTable = document.getElementById("student-table-container");
-  x.style.display = "flex";
+  userTable.style.display = "flex";
   if (studentCards.style.display === "none") {
     studentCards.style.display = "flex";
     studentTable.style.display = "none";
   } else {
     studentCards.style.display = "none";
     studentTable.style.display = "block";
-    y.style.display = "none";
+    addUser.style.display = "none";
   }
 };
 
@@ -124,50 +118,51 @@ const init = async () => {
 init();
 
 function showUser(a) {
-  for (let i = 0; i < usersArray.length; i++) {
-    if (a == i) {
-      test.innerHTML = `<div id="studentId" onclick="showUser()"> <div class="student-details">
-          <h2>${usersArray[i].name}</h2><br>
-          <span>Age:${usersArray[i].age}</span><br>
-          <span>Email:${usersArray[i].email}</span><br>
-          <span>Phone:${usersArray[i].phone}</span><br>
-          <span>ID:${usersArray[i].id}</span>
+  for (let user of usersArray) {
+    if (a == user.index) {
+      test.innerHTML = `<div onclick="showUser()"> <div class="student-details">
+          <h2>${user.name}</h2><br>
+          <span>Age:${user.age}</span><br>
+          <span>Email:${user.email}</span><br>
+          <span>Phone:${user.phone}</span><br>
+          <span>ID:${user.id}</span>
           </div>
           <div class="student-image">
               <img src="${user.picture}" alt="">
           </div>
           </div>`;
-      test.innerHTML = `<div id="studentId" onclick="showUser()"> <div class="student-details">
-    <h2>${user.name}</h2><br>
-    <span>Age:${user.age}</span><br>
-    <span>Email:${user.email}</span><br>
-    <span>Phone:${user.phone}</span><br>
-    <span>ID:${user.id}</span>
-    </div>
-    <div class="student-image">
-        <img src="${user.picture}" alt="">
-    </div>
-    </div>`;
     }
   }
   if (studentCards.style.display === "none") {
     studentCards.style.display = "flex";
-    studentId.style.display = "none";
+    test.style.display = "none";
   } else {
     studentCards.style.display = "none";
     test.style.display = "flex";
-    studentId.style.display = "none";
-    x.style.display = "none";
+
+    userTable.style.display = "none";
   }
 }
 
 function showSignUp() {
   if (studentCards.style.display === "none") {
     studentCards.style.display = "flex";
-    y.style.display = "none";
+    addUser.style.display = "none";
   } else {
     studentCards.style.display = "none";
     test.style.display = "none";
-    y.style.display = "";
+    addUser.style.display = "";
+  }
+}
+
+ function validation() {
+  let fiestEmail =  document.getElementById("Email").value
+   let secoundEmail =  document.getElementById('conEmail').value
+
+  if (fiestEmail === secoundEmail) {
+    alert("welcom")
+  } else {
+    alert("shot");
+    return false;
   }
 }

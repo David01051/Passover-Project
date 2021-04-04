@@ -13,14 +13,15 @@
   <body>
     <header>
       <span> <a href="https://tech-career-alternative.firebaseapp.com/"><img id="img-logo" src="https://www.kolzchut.org.il/w/he/images/e/e4/%D7%9C%D7%95%D7%92%D7%95_%D7%98%D7%A7-%D7%A7%D7%A8%D7%99%D7%99%D7%A8%D7%94.jpg" alt=""></a></span>
-        
-      
       <span>
         <img id="img-logo2" src="Picture1.png" alt="">
       </span>
     </header>
     <section>
-      <aside>Sidebar</aside>
+      <aside>
+        sidebar
+        
+      </aside>
       <main>
         <button onclick="showTable()">Table info</button>
         <button onclick="showSignUp()">Register</button>
@@ -44,24 +45,25 @@
                 <br>
                 <h1>Sign up</h1><br>
                 <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname"><br>
+                <input type="text" id="fname" name="fname" required><br>
                 
                 <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname"><br>
+                <input type="text" id="lname" name="lname" required><br>
                 
                 <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
+                <input type="email" id="Email " name="email" required><br>
                 
                 <label for="email">Re Email:</label><br>
-                <input type="email" id="email" name="email"><br>
+                <input type="email" id="conEmail" name="email" required><br>
                 
                 <label for="phone">Phone:</label><br>
-                <input type="number" id="phone" name="phone"><br>
+                <input type="number" id="phone" name="phone" required><br>
                 
                 <label for="age">Age:</label><br>
-                <input type="number" id="age" name="age"><br>
+                <input type="number" id="age" name="age" required><br>
+                <button onclick="validation()">  subasjd</button>
                 
-                <input type="submit" value="Submit" id="sub"><br>
+                <button type="Submit"   id="subbu"> submit</button>
             </form>
             </div>
         
@@ -87,7 +89,7 @@
         </ul>
       </div>
     </footer>
-    <div class="Copyright">© 2021 Copyright: David Talala</div>
-    <script src="main.js"></script>
+    <div class="Copyright">© 2021 Copyright: David Talala </div>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
