@@ -1,0 +1,203 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+body {
+  background-color: rgb(103, 107, 107);
+}
+header {
+  width: 90vw;
+  height: 130px;
+  margin-left: 5%;
+  border-radius: 0px 0px 25px 25px;
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#img-logo {
+  width: 250px;
+  height: 100px;
+}
+#img-logo2{
+  width: 80px;
+  height: 140px;
+  margin-left: 300%;
+}
+
+section {
+  display: flex;
+  width: 100vw;
+  min-height: 500px;
+}
+aside {
+  flex-basis: 10%;
+  min-width: 200px;
+  background: rgb(215, 216, 218);
+  
+}
+main {
+  flex-basis: 90%;
+  padding: 16px;
+}
+footer {
+  width: 100vw;
+  height: 100px;
+  background: rgb(59, 59, 59);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Copyright {
+  width: 100vw;
+  height: 50px;
+  color: white;
+  background-color: rgb(43, 42, 42);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main button {
+  background-color: rgb(59, 59, 59);
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 30%;
+  font-size: 16px;
+  border-radius: 10%;
+  
+}
+#studentCards, #test {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.studentClassCard ,#test, #studentId{
+  width: 30%;
+  height: 250px;
+  margin: 12px;
+  font-size: 90%;
+  background-color: rgb(59, 59, 59);
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.studentClassCard:hover {
+  box-shadow: 0 18px 20px 0 rgba(0, 0, 0, 0.2);
+}
+.student-details {
+  flex-basis: 60%;
+  color: rgb(211, 209, 209);
+}
+.student-image {
+  flex-basis: 40%;
+}
+.student-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+#student-table-container {
+  padding: 16px;
+  display: "none";
+}
+#student-table-container table {
+  width: 95%;
+  border-radius: 8px;
+  color: rgb(211, 209, 209);
+  background-color: rgb(59, 59, 59);
+  border: 1px solid rgb(3, 3, 3);
+}
+#student-table-container tr td {
+  height: 50px;
+  border-radius: 8px;
+  text-align: center;
+  border: 0.1px solid rgb(20, 20, 20);
+}
+#user-icon ul {
+  display: flex;
+}
+#user-icon ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+#user-icon ul li .fa {
+  font-size: 25px;
+  line-height: 50px;
+  transition: 0.5s;
+  color: rgb(253, 253, 253);
+}
+#user-icon ul li .fa:hover {
+  color: #fff;
+}
+#user-icon ul li a {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 30%;
+  border: 1px solid #fff;
+
+  text-align: center;
+  transition: 0.6s;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+}
+#user-icon ul li a:hover {
+  transform: translate(0, -10px);
+}
+#user-icon ul li:nth-child(1) a:hover {
+  background-color: #3b5999;
+}
+#user-icon ul li:nth-child(2) a:hover {
+  background-color: rgb(27, 26, 26);
+}
+#user-icon ul li:nth-child(3) a:hover {
+  background-color: #3b5999;
+}
+#user-icon ul li:nth-child(4) a:hover {
+  background-color: #e4405f;
+}
+
+#student-add-user{
+    padding: 16px;
+    display: flex;
+    justify-content: center;   
+}
+
+#student-add-user .form-user{
+    width: 25vw;
+    border-radius: 16px;
+    color: white;
+    background-color: rgb(59, 59, 59);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+     
+}
+#student-add-user .form-user input{
+    width: 50%;
+    height: 30px;
+    border-radius: 8px;
+}
+#student-add-user .form-user #sub{
+    width: 80px;
+    height: 40px;
+    border-radius: 16px;
+    color: white;
+    background-color: rgb(94, 91, 91);
+}
+
+
+
+
+
