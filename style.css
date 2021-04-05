@@ -200,3 +200,7 @@ main button {
   color: white;
   background-color: rgb(94, 91, 91);
 }
+.send{
+  margin: 8px;
+  width: 80px;
+}
