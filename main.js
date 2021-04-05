@@ -162,7 +162,7 @@ function showSignUp() {
   if (fiestEmail === secoundEmail) {
     alert("welcom")
   } else {
-    alert("shot");
+    alert("Email is not the same");
     return false;
   }
 }

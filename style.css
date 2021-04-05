@@ -32,7 +32,7 @@ section {
   width: 100vw;
   min-height: 500px;
 }
-aside {
+#sidebar {
   flex-basis: 10%;
   min-width: 200px;
   border: 1px solid black;
@@ -74,6 +74,7 @@ main button {
   margin-left: 25%;
   font-size: 16px;
   border-radius: 10%;
+  border: 2px solid rgb(9, 88, 161);
 }
 #studentCards,
 #test {
@@ -188,19 +189,68 @@ main button {
   align-items: center;
   flex-direction: column;
 }
-#student-add-user .form-user input button{
+#student-add-user .form-user input {
   width: 50%;
   height: 30px;
   border-radius: 8px;
 }
 #student-add-user .form-user #subbu {
   width: 80px;
-  height: 40px;
+  height: 50px;
   border-radius: 16px;
   color: white;
   background-color: rgb(94, 91, 91);
 }
-.send{
+.send {
   margin: 8px;
-  width: 80px;
+  width: 20%;
+}
+@media only screen and (min-width: 375px) and (max-width: 812px) {
+  header {
+    display: flex;
+    justify-content: center;
+  }
+  #sidebar {
+    display: none;
+  }
+  main button {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+  }
+  main :nth-child(1) {
+    left: -50px;
+  }
+  main :nth-child(2) {
+    left: 37%;
+  }
+  #studentCards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+  }
+  .studentClassCard {
+    width: 80vw;
+  }
+  #student-add-user {
+    padding-top: 23%;
+  }
+
+  #student-add-user .form-user {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-user input {
+    display: flex;
+  }
+  .send {
+    top: 100%;
+  }
+  #student-table-container {
+    padding-top: 15%;
+  }
 }
