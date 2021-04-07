@@ -154,15 +154,23 @@ function showSignUp() {
     addUser.style.display = "";
   }
 }
+function validation() {
+    //const firstName = document.getElementById("fname").value;
+    //const lastName = document.getElementById("lname").value;
+    const email = document.getElementById("email").value;
+    const confirmEmail = document.getElementById("mailconfirm").value;
+    //const phone = document.getElementById("phone").value;
+    //const age = document.getElementById("age").value;
+  
+    if(email === '' || confirmEmail === '') {
+      return alert('Email or Confirm field are empty')
+    };
+  
+    if(email !== confirmEmail) {
+      return alert('The email and confirm email are not the same')
+    };
 
- function validation() {
-  let fiestEmail =  document.getElementById("Email").value
-   let secoundEmail =  document.getElementById('conEmail').value
-
-  if (fiestEmail === secoundEmail) {
-    alert("welcom")
-  } else {
-    alert("Email is not the same");
-    return false;
+    return alert('Access approved');
   }
-}
+
+
